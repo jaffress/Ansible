@@ -1,0 +1,10 @@
+---
+- name: Udpate OS
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Mettre a jour le cache APT et faire un upgrade
+      apt:
+        update_cache: yes
+        upgrade: dist
