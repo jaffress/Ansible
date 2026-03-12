@@ -25,12 +25,12 @@ Elif JAFFRES
       - [B. Visualisation via terminal (Controller)](#b-visualisation-via-terminal-controller)
   - [Conclusion](#conclusion)
 
-## Présentation de la solution (Ansible)
+## Présentation Projet Ansible
 
 Dans un contexte d'infrastructure à grande échelle, la gestion manuelle des serveurs (mises à jour, configuration de services, gestion des utilisateurs) s'avère chronophage et propice aux erreurs humaines.
 
 **Ansible**, solution open-source de gestion de configuration et d'automatisation développée par Red Hat, répond à ces problématiques. Son architecture repose sur trois piliers majeurs :
-1. **L'Infrastructure as Code (IaC)** : Les configurations sont définies via des **Playbooks** (écrits en YAML), garantissant la reproductibilité et l'idempotence des déploiements.
+1. **L'Infrastructure as Code (IaC)** : Les configurations sont définies via des Playbooks (écrits en YAML), garantissant la reproductibilité et l'idempotence des déploiements.
 2. **Un modèle d'inventaire clair** : Les hôtes cibles sont regroupés de manière logique au sein de fichiers d'inventaire.
 3. **Une approche « Agentless »** : Contrairement à d'autres solutions, Ansible ne nécessite l'installation d'aucun agent sur les machines cibles. La communication s'effectue de manière chiffrée via le protocole **SSH** standard depuis un nœud central (le **Controller**).
 
