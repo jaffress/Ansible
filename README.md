@@ -44,7 +44,7 @@ Pour bien appréhender la documentation technique de ce dépôt, voici le socle 
 *   **YAML (YAML Ain't Markup Language)** : Le format de sérialisation de données - lisible par l'humain - utilisé pour rédiger les Playbooks et les configurations d'Ansible. Son extension est usuellement `.yml`.
 *   **Module** : L'unité de code exécutée par Ansible. Il en existe des milliers (ex: le module `apt` pour gérer des paquets Debian, le module `user` pour l'authentification). Les Playbooks appellent ces modules.
 *   **Inventory (Inventaire)** : Fichier (typé `.ini` ou `.yml`) cartographiant statiquement ou dynamiquement les nœuds gérés (Adresses IP ou FQDN) et permettant de les scinder en groupes logiques (ex: *[webservers]*, *[databases]*).
-*   **Nginx (Engine-X)** : Bien que n'étant pas exclusif à Ansible, il s'agit du logiciel Serveur Web (et Reverse Proxy) le plus performant au monde. Dans ce projet, il représente le service final ou l'application "métier" que nous cherchons à déployer automatiquement sur la Cible pour valider notre architecture IaC.
+*   **Nginx ** : Bien que n'étant pas exclusif à Ansible, il s'agit du logiciel Serveur Web (et Reverse Proxy). Dans ce projet, il représente le service final ou l'application "métier" que nous cherchons à déployer automatiquement sur la Cible pour valider notre architecture IaC.
 
 ## Périmètre du livrable
 
