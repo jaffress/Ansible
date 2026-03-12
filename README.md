@@ -141,9 +141,9 @@ cd ~/ansible-lab
 
 Maintenant qu'Ansible est installé, il ne sait absolument pas à quelles machines il doit parler, ni comment se comporter. 
 
-**La philosophie des "Bonnes Pratiques" (Structure du projet)**
+**tructure du projet**
 
-**Démarche d'organisation (Best Practices)**
+**Démarche d'organisation**
 
 Dans le cadre d'une administration moderne, l'utilisation de l'inventaire global du système (`/etc/ansible/hosts`) est déconseillée car elle nuit à la portabilité et complexifie la gestion multi-projets.
 
@@ -189,7 +189,7 @@ La deuxième phase consiste à définir le contexte de travail strict dans ce do
    *Preuve de création des fichiers de configuration :*
    ![Création des fichiers Ansible](images/fichiers-ansible.png)
 
-### Validation de l'environnement (Test de connectivité)
+### Test de connectivité
 
 Une fois l'inventaire configuré, il est impératif de valider la communication entre le Controller et ses Cibles avant d'entamer le déploiement de Playbooks. 
 
@@ -213,7 +213,7 @@ cible | SUCCESS => {
 
 L'obtention du retour `"ping": "pong"` certifie que le Controller a pu s'authentifier sur la Cible, interpréter son langage Python, et valider l'exécution de code à distance. L'environnement est prêt pour l'Infrastructure as Code (IaC).
 
-### Étape 3 : Durcissement du système (Premier Playbook)
+### Étape 3 : Premier Playbook
 
 Maintenant que la connexion est établie, nous déployons notre premier véritable code d'Infrastructure (IaC). L'objectif est de s'assurer que le serveur cible est parfaitement à jour (mise à jour de sécurité des paquets Debian) sans aucune intervention humaine sur la machine cible.
 
