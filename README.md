@@ -114,14 +114,13 @@ Voici les étapes clés lors de l'installation et de la configuration des  VMs D
 
    * Il faut ensuite ajouter l'utilisateur standard au groupe `sudo` pour qu'Ansible puisse l'utiliser plus tard :
      ```bash
-     usermod -aG sudo elif
+     usermod -aG sudo qnsible
      ```
-     *(Remplacer `elif` par le nom de l'utilisateur défini lors de l'installation).*
+
    * Redémarrer la machine (`reboot`) pour la prise en compte de la politique de groupes.
 
 4. **Récupération des adresses IP** :
-   * Une fois reconnecté avec l'utilisateur standard, validez que `sudo` fonctionne en tapant `sudo ls` (le mot de passe de l'utilisateur sera demandé).
-   * Utilisez la commande `ip a` pour relever les adresses IP (Controller et Cible) nécessaires à la suite des opérations.
+   * La commande `ip a` pour relever les adresses IP (Controller et Cible) nécessaires à la suite des opérations.
 
 ---
 
