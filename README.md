@@ -21,8 +21,7 @@ Elif JAFFRES
     - [Transition vers l'accès "Sans Mot de Passe"](#transition-vers-laccès-sans-mot-de-passe)
     - [Étape 5 : Déploiement de NGINX + site démo](#étape-5--déploiement-de-nginx--site-démo)
     - [Étape 6 : Validation finale du site web](#étape-6--validation-finale-du-site-web)
-      - [A. Visualisation via navigateur (Windows)](#a-visualisation-via-navigateur-windows)
-      - [B. Visualisation via terminal (Controller)](#b-visualisation-via-terminal-controller)
+      - [A. Visualisation via terminal (Controller)](#b-visualisation-via-terminal-controller)
   - [Conclusion](#conclusion)
 
 ## Présentation Projet Ansible
@@ -294,7 +293,7 @@ ssh devops@192.168.1.68
 
 ### Étape 5 : Déploiement de NGINX + site démo
 
-La dernière étape consiste à déployer un service réel (Serveur Web Nginx) et à y héberger un site statique pour valider l'ensemble de l'automatisation.
+La dernière étape consiste à déployer un service réel (Serveur Web Nginx).
 
 **Actions à entreprendre :**
 
@@ -317,21 +316,9 @@ Le déploiement s'est terminé avec succès (`ok=4 changed=1`). Toutes les étap
 
 ### Étape 6 : Validation finale du site web
 
-Pour confirmer que tout fonctionne, il existe deux méthodes :
+#### A. Visualisation via terminal (Lynx)
 
-#### A. Visualisation via navigateur (Windows)
-Si ton PC Windows a accès au réseau de la VM, tape l'adresse IP dans ton navigateur :
-**URL :** `http://192.168.1.68`
-
-#### B. Visualisation via terminal (Controller)
-Si le navigateur Windows est bloqué (pare-feu), tu peux vérifier le site directement depuis ton Controller :
-
-1. **Vérification rapide (Code HTML) :**
-   ```bash
-   curl http://192.168.1.68
-   ```
-
-2. **Navigateur textuel (Interface visuelle) :**
+1. **Navigateur textuel (Interface visuelle) :**
    ```bash
    sudo apt install lynx -y
    lynx http://192.168.1.68
@@ -339,7 +326,6 @@ Si le navigateur Windows est bloqué (pare-feu), tu peux vérifier le site direc
 
 ![Visualisation du site via Lynx](images/siteweb-lynx.png)
 
-![Site Web déployé depuis un navigateur](images/siteweb-browser.png)
 
 ## Conclusion
 
